@@ -1,20 +1,21 @@
-package com.application;
+package com.application.scenes;
 
 import com.application.DataBaseHandler.DataBaseHandler;
 import com.application.table_objects.WorkTable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.IntegerStringConverter;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.sql.ResultSet;
 
-public class MainController {
-
+public class AdminWorkspaceController {
     @FXML
     private TableView<WorkTable> workTable;
 
@@ -117,8 +118,6 @@ public class MainController {
                 workTable.setItems(wTable);
             }
 
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -216,6 +215,4 @@ public class MainController {
 
 
     }
-
 }
-
